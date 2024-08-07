@@ -1,0 +1,68 @@
+.form-container {
+  /* border: 2px solid black; */
+  position: absolute;
+  top: 40vw;
+  left: 20vw;
+}
+.label-text {
+  font-family: "HeinzLabel";
+  font-size: 9vw;
+  color: white;
+  font-weight: normal;
+}
+.input-div {
+  position: absolute;
+  top: 69vw;
+  left: 12vw;
+}
+.input-field {
+  width: 78vw;
+  height: 12vw;
+  background: none;
+  border: 4px solid white;
+  font-size: 5vw;
+  color: white;
+}
+.logo-container-login {
+  position: absolute;
+  width: 23vw;
+  top: 10vw;
+  left: 39vw;
+}
+.button-div {
+  /* border: 2px solid black; */
+  position: absolute;
+  top: 86vw;
+  left: 40vw;
+}
+.button {
+  height: 7vw;
+  width: 21vw;
+  font-size: 6vw;
+  font-family: "HeinzLabel";
+}
+
+.preview-container {
+  /* border: 2px solid black; */
+  height: 75vw;
+  width: 55vw;
+  position: absolute;
+  top: 40vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.webcam-preview {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.capture-btn-container {
+  /* border: 2px solid black; */
+  position: absolute;
+  bottom: 4vw;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
