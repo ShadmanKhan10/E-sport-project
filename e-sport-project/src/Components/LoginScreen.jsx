@@ -8,6 +8,7 @@ import Clicked from "./Clicked.jsx";
 
 export default function LoginScreen() {
   const [page, setPage] = useState("loginScreen");
+  const [src, setSrc] = useState();
   const webcamRef = useRef(null);
 
   const handleButtonClick = () => {
@@ -16,6 +17,9 @@ export default function LoginScreen() {
   };
 
   const handleCapture = () => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    setSrc(imageSrc);
+    console.log(imageSrc);
     setPage("clicked");
   };
 
@@ -58,7 +62,7 @@ export default function LoginScreen() {
       )}
       {page === "clicked" && (
         <div>
-          <Clicked />
+          <Clicked capturedImage={src} />
         </div>
       )}
     </div>

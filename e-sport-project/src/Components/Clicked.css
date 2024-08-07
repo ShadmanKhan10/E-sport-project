@@ -43,3 +43,18 @@
   border: none;
   color: #de0027;
 }
+
+.captured-img-container-div {
+  /* border: 2px solid black; */
+  height: 65vw;
+  width: 45vw;
+  position: absolute;
+  top: 37vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.captured-image-click {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
