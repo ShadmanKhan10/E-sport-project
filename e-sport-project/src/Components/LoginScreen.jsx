@@ -4,23 +4,24 @@ import Background from "../assets/Background.png";
 import Heinz from "../assets/Heinz.png";
 import CaptureButton from "../assets/CaptureButton.png";
 import "./LoginScreen.css";
+import Clicked from "./Clicked.jsx";
 
 export default function LoginScreen() {
   const [page, setPage] = useState("loginScreen");
-  const [isCameraOpen, setIsCameraOpen] = useState(false);
   const webcamRef = useRef(null);
 
   const handleButtonClick = () => {
     setPage("clickPage");
     console.log(page);
   };
-  const handleCaptureClick = () => {
-    setIsCameraOpen(true);
-    console.log("Camera Opened");
+
+  const handleCapture = () => {
+    setPage("clicked");
   };
+
   return (
     <div>
-      {page !== "clickPage" ? (
+      {page === "loginScreen" && (
         <div>
           <div className="background-containig-div">
             <img src={Background} className="background-img" alt="Background" />
@@ -41,23 +42,23 @@ export default function LoginScreen() {
             </button>
           </div>
         </div>
-      ) : (
+      )}
+      {page === "clickPage" && (
         <div>
           <div className="background-containig-div">
             <img src={Background} className="background-img" alt="Background" />
           </div>
           <div className="preview-container">
-            {isCameraOpen && (
-              <Webcam
-                audio={false}
-                ref={webcamRef}
-                className="webcam-preview"
-              />
-            )}
+            <Webcam audio={false} ref={webcamRef} className="webcam-preview" />
           </div>
-          <div className="capture-btn-container" onClick={handleCaptureClick}>
+          <div className="capture-btn-container" onClick={handleCapture}>
             <img src={CaptureButton} className="capture" alt="capture" />
           </div>
+        </div>
+      )}
+      {page === "clicked" && (
+        <div>
+          <Clicked />
         </div>
       )}
     </div>

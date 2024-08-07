@@ -1,0 +1,45 @@
+.captured-image-container {
+  height: 75vh;
+  width: 70vw;
+  position: absolute;
+  top: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 25px solid white;
+}
+
+.heinz-container {
+  /* border: 2px solid black; */
+  position: absolute;
+  bottom: 15vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.buttons-container {
+  /* border: 2px solid white; */
+  position: absolute;
+  top: 85vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68vw;
+  height: 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+.confirm {
+  height: 100%;
+  width: 30vw;
+  font-size: 5vw;
+  font-family: "HeinzLabel";
+  border: none;
+  color: #de0027;
+}
+.retake {
+  height: 100%;
+  width: 30vw;
+  font-size: 5vw;
+  font-family: "HeinzLabel";
+  border: none;
+  color: #de0027;
+}
