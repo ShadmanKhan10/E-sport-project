@@ -8,12 +8,14 @@
   position: absolute;
   width: 23vw;
   top: 10vw;
-  left: 42vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .sport-container {
   /* border: 2px solid black; */
   position: absolute;
   top: 50vw;
-  left: 25vw;
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
 }
