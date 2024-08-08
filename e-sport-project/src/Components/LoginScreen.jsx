@@ -53,7 +53,12 @@ export default function LoginScreen() {
             <img src={Background} className="background-img" alt="Background" />
           </div>
           <div className="preview-container">
-            <Webcam audio={false} ref={webcamRef} className="webcam-preview" />
+            <Webcam
+              mirrored={true}
+              audio={false}
+              ref={webcamRef}
+              className="webcam-preview"
+            />
           </div>
           <div className="capture-btn-container" onClick={handleCapture}>
             <img src={CaptureButton} className="capture" alt="capture" />
