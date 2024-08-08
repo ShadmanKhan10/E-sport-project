@@ -5,13 +5,13 @@
   top: 10vw;
   left: 50%;
   transform: translateX(-50%);
-  border: 25px solid white;
+  border: 20px solid white;
 }
 
 .heinz-container {
   /* border: 2px solid black; */
   position: absolute;
-  bottom: 15vw;
+  bottom: 10vw;
   left: 50%;
   transform: translateX(-50%);
 }

@@ -36,7 +36,9 @@
   left: 40vw;
 }
 .button {
-  height: 7vw;
+  height: 8vw;
+  text-align: center;
+  vertical-align: middle;
   width: 21vw;
   font-size: 6vw;
   font-family: "HeinzLabel";
@@ -45,10 +47,10 @@
 
 .preview-container {
   /* border: 2px solid black; */
-  height: 75vw;
+  height: 80vw;
   width: 55vw;
   position: absolute;
-  top: 40vw;
+  top: 35vw;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -61,9 +63,15 @@
 
 .capture-btn-container {
   /* border: 2px solid black; */
+  height: 30vw;
+  width: 30vw;
   position: absolute;
   bottom: 4vw;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+}
+.capture {
+  height: 100%;
+  width: 100%;
 }

@@ -11,7 +11,7 @@ export default function ThankYou() {
         <img src={Background} className="background-img" alt="Background" />
       </div>
       <div className="thankyou-logo-container">
-        <img src={Heinz} className="logo" alt="logo" />
+        <img src={Heinz} className="logo-thanks" alt="logo" />
       </div>
       <div className="thankyou-container">
         <img src={Thanks} className="img-thanks" alt="thankyou" />
