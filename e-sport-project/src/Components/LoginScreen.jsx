@@ -8,6 +8,7 @@ import Clicked from "./Clicked.jsx";
 
 export default function LoginScreen() {
   const [page, setPage] = useState("loginScreen");
+  const [email, setEmail] = useState("");
   const [src, setSrc] = useState();
   const webcamRef = useRef(null);
 
@@ -21,6 +22,10 @@ export default function LoginScreen() {
     setSrc(imageSrc);
     console.log(imageSrc);
     setPage("clicked");
+  };
+
+  const handleChange = (event) => {
+    setEmail(event.target.value);
   };
 
   return (
@@ -38,7 +43,12 @@ export default function LoginScreen() {
             {/* <input type="text" className="input-field" /> */}
           </div>
           <div className="input-div">
-            <input type="text" className="input-field" />
+            <input
+              type="text"
+              value={email}
+              onChange={handleChange}
+              className="input-field"
+            />
           </div>
           <div className="button-div">
             <button onClick={handleButtonClick} className="button">
@@ -67,7 +77,7 @@ export default function LoginScreen() {
       )}
       {page === "clicked" && (
         <div>
-          <Clicked capturedImage={src} />
+          <Clicked email={email} capturedImage={src} />
         </div>
       )}
     </div>

@@ -6,7 +6,7 @@ import ThankYou from "./ThankYou";
 import Webcam from "react-webcam";
 import CaptureButton from "../assets/CaptureButton.png";
 
-export default function Clicked({ capturedImage }) {
+export default function Clicked({ capturedImage, email }) {
   const [lastPage, setLastPage] = useState("");
   const [toggle, setToggle] = useState(false);
   const webcamRef = useRef(null);
@@ -58,7 +58,7 @@ export default function Clicked({ capturedImage }) {
       )}
       {lastPage === "thankyou" && (
         <div>
-          <ThankYou />
+          <ThankYou email={email} />
         </div>
       )}
       {lastPage === "clickPage" && toggle && (
