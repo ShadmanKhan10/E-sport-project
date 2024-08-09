@@ -5,6 +5,7 @@ import Heinz from "../assets/Heinz.png";
 import CaptureButton from "../assets/CaptureButton.png";
 import "./LoginScreen.css";
 import Clicked from "./Clicked.jsx";
+import Frame from "../assets/Frame.png";
 
 export default function LoginScreen() {
   const [page, setPage] = useState("loginScreen");
@@ -62,6 +63,7 @@ export default function LoginScreen() {
           <div className="background-containig-div">
             <img src={Background} className="background-img" alt="Background" />
           </div>
+
           <div className="preview-container">
             <Webcam
               mirrored={true}
@@ -69,6 +71,9 @@ export default function LoginScreen() {
               ref={webcamRef}
               className="webcam-preview"
             />
+            <div className="frame-div">
+              <img src={Frame} className="frame" alt="frame" />
+            </div>
           </div>
           <div className="capture-btn-container" onClick={handleCapture}>
             <img src={CaptureButton} className="capture" alt="capture" />

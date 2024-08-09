@@ -5,6 +5,7 @@ import "./Clicked.css";
 import ThankYou from "./ThankYou";
 import Webcam from "react-webcam";
 import CaptureButton from "../assets/CaptureButton.png";
+import Frame from "../assets/Frame.png";
 
 export default function Clicked({ capturedImage, email }) {
   const [lastPage, setLastPage] = useState("");
@@ -72,6 +73,10 @@ export default function Clicked({ capturedImage, email }) {
               />
             </div>
             <div className="preview-container">
+              {/* <div className="frame-div">
+                <img src={Frame} className="frame" alt="frame" />
+              </div> */}
+
               <Webcam
                 audio={false}
                 ref={webcamRef}
